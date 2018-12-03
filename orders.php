@@ -32,7 +32,7 @@ include 'config.php';
       <!-- Right Nav Section -->
         <ul class="right">
           <li><a href="products.php">Menu</a></li>
-          <li><a href="cart.php">Keranjang</a></li>
+          <li><a href="cart.php">Daftar Pesanan</a></li>
           <li><a href="orders.php">Riwayat Pembelian</a></li>
           <li><a href="contact.php">Kontak</a></li>
           <?php
@@ -62,13 +62,10 @@ include 'config.php';
           if($result) {
             while($obj = $result->fetch_object()) {
               //echo '<div class="large-6">';
-              echo '<p><h4>Kode Pesanan ->'.$obj->id.'</h4></p>';
-              // echo '<p><strong>Tanggal Pesanan</strong>: '.$obj->date.'</p>';
-              echo '<p><strong>Product Code</strong>: '.$obj->kode_menu.'</p>';
-              echo '<p><strong>Product Name</strong>: '.$obj->nama_menu.'</p>';
-              echo '<p><strong>Price Per Unit</strong>: '.$obj->harga.'</p>';
-              echo '<p><strong>Units Bought</strong>: '.$obj->jumlah.'</p>';
-              echo '<p><strong>Total Cost</strong>: '.$currency.$obj->total.'</p>';
+              echo '<p><strong>Kode Pesanan</strong> : '.$obj->idP.'</p>';
+              echo '<p><strong>Nama Menu</strong> : '.$obj->nama_menu.'</p>';
+              echo '<p><strong>Harga Satuan</strong> : '.$obj->harga.'</p>';
+              echo '<p><strong>Jumlah</strong> : '.$obj->jumlah.'</p>'; echo '<p><strong>Total Bayar</strong>: '.$currency.$obj->total.'</p>';
               echo '<p><hr></p>';
 
             }
