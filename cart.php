@@ -36,7 +36,7 @@ include 'config.php';
       <!-- Right Nav Section -->
         <ul class="right">
           <li><a href="products.php">Menu</a></li>
-          <li><a href="cart.php">Keranjang</a></li>
+          <li><a href="cart.php">Daftar Pesanan</a></li>
           <li><a href="orders.php">Riwayat Pembelian</a></li>
           <li><a href="contact.php">Kontak</a></li>
           <?php
@@ -67,14 +67,14 @@ include 'config.php';
             $total = 0;
             echo '<table>';
             echo '<tr>';
-            echo '<th>Kode Menu</th>';
             echo '<th>Nama Menu</th>';
             echo '<th>Jumlah Pesanan</th>';
+            echo '<th>Harga Satuan</th>';
             echo '<th>Total Harga</th>';
             echo '</tr>';
             foreach($_SESSION['cart'] as $menu_id => $jumlah) {
 
-            $result = $mysqli->query("SELECT kode_menu, nama_menu, desk_menu, jumlah, harga FROM menu WHERE id = ".$menu_id);
+            $result = $mysqli->query("SELECT nama_menu, desk_menu, jumlah, harga FROM menu WHERE id = ".$menu_id);
 
 
             if($result){
@@ -84,9 +84,9 @@ include 'config.php';
                 $total = $total + $cost; //add to the total cost
 
                 echo '<tr>';
-                echo '<td>'.$obj->kode_menu.'</td>';
                 echo '<td>'.$obj->nama_menu.'</td>';
                 echo '<td>'.$jumlah.'&nbsp;<a class="button [secondary success alert]" style="padding:5px;" href="update-cart.php?action=add&id='.$menu_id.'">+</a>&nbsp;<a class="button alert" style="padding:5px;" href="update-cart.php?action=remove&id='.$menu_id.'">-</a></td>';
+                echo '<td>'.$obj->harga.'</td>';
                 echo '<td>'.$cost.'</td>';
                 echo '</tr>';
               }

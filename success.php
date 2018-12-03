@@ -28,7 +28,7 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
       <!-- Right Nav Section -->
         <ul class="right">
           <li><a href="products.php">Menu</a></li>
-          <li><a href="cart.php">Keranjang</a></li>
+          <li><a href="cart.php">Daftar Pesanan</a></li>
           <li><a href="orders.php">Riwayat Pembelian</a></li>
           <li><a href="contact.php">Kontak</a></li>
           <?php
