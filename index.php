@@ -32,7 +32,7 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
       <!-- Right Nav Section -->
         <ul class="right">
           <li><a href="products.php">Menu</a></li>
-          <li><a href="cart.php">Keranjang</a></li>
+          <li><a href="cart.php">Daftar Pesanan</a></li>
           <li><a href="orders.php">Riwayat Pembelian</a></li>
           <li><a href="contact.php">Kontak</a></li>
           <?php
@@ -66,7 +66,7 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
         </div>
         <div class="col-lg-3 col-sm-6 text-center mb-4">
           <img class="rounded-circle img-fluid d-block mx-auto" src="images/menu.jpg" alt="">
-          <h3>Pilih Menu Lalu Tambahkan Ke Keranjang</h3>
+          <h3>Pilih Menu Lalu Tambahkan Ke Daftar Pesanan</h3>
 
         </div>
         <div class="col-lg-3 col-sm-6 text-center mb-4">

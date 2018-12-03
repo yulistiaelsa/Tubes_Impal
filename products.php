@@ -28,7 +28,7 @@ include 'config.php';
       <!-- Right Nav Section -->
         <ul class="right">
           <li><a href="products.php">Menu</a></li>
-          <li><a href="cart.php">Keranjang</a></li>
+          <li><a href="cart.php">Daftar Pesanan</a></li>
           <li><a href="orders.php">Riwayat Pembelian</a></li>
           <li><a href="contact.php">Kontak</a></li>
           <?php
@@ -67,7 +67,6 @@ include 'config.php';
               echo '<div class="large-4 columns">';
               echo '<p><h3>'.$obj->nama_menu.'</h3></p>';
               echo '<img src="images/menu/'.$obj->gambar_menu.'"/>';
-              echo '<p><strong>Kode Menu</strong>: '.$obj->kode_menu.'</p>';
               echo '<p><strong>Deskripsi</strong>: '.$obj->desk_menu.'</p>';
               echo '<p><strong>Jumlah Porsi yang Tersedia</strong>: '.$obj->jumlah.'</p>';
               echo '<p><strong>Harga (Per Porsi)</strong>: '.$obj->harga.'</p>';
@@ -78,7 +77,7 @@ include 'config.php';
                 echo '<p><a href="update-cart.php?action=add&id='.$obj->id.'"><input type="submit" value="Tambahkan" style="clear:both; background: #0078A0; border: none; color: #fff; font-size: 1em; padding: 10px;" /></a></p>';
               }
               else {
-                echo 'Out Of Stock!';
+                echo 'Menu Telah Habis!';
               }
               echo '</div>';
 
